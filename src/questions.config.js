@@ -20,7 +20,7 @@ export const questions = [
             },
             {
                 id: '2',
-                text: 'Постараюсь запомнить кто есть кто',
+                text: 'Постараюсь запомнить, кто есть кто',
                 type: AnswerType.Python,
             },
             {
