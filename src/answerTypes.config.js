@@ -1,6 +1,6 @@
 import React from 'react';
 import { BlueText, RedText, Text } from './components/common/Text';
-import { firstQGif, introGif, secondQGif, thirdGif } from './constants/images';
+import { CPlusGif, CSharpGif, firstQGif, introGif, JavaGif, PythonGif, secondQGif, thirdGif } from './constants/images';
 
 export const AnswerType = {
     Python: 'Python',
@@ -23,7 +23,7 @@ export const answerTypes = {
             а выбираете <RedText>конкретную цель</RedText>{'\n'}
             и работаете на ее достижение.
         </Text>,
-        image: secondQGif,
+        image: CPlusGif,
         shareImage: '',
     },
     [AnswerType.CSharp]: {
@@ -36,7 +36,7 @@ export const answerTypes = {
             Обыденность и стагнация — это не про вас, вы всегда за <BlueText>{'<'}</BlueText>
             развитие<BlueText>{'>'}</BlueText> и поиск <RedText>новых возможностей</RedText>.
         </Text>,
-        image: thirdGif,
+        image: CSharpGif,
         shareImage: '',
     },
     [AnswerType.Java]: {
@@ -47,7 +47,7 @@ export const answerTypes = {
             Вы обстоятельный человек, который{'\n'}точно <RedText>доведет дело до конца</RedText> и будет работать, пока не придет к <BlueText>{'<'}</BlueText>идеальному<BlueText>{'>'}</BlueText> результату.{'\n\n'}
             Скорость работы вам не важна,{'\n'}куда больше вы цените <BlueText>качество</BlueText>.
         </Text>,
-        image: introGif,
+        image: JavaGif,
         shareImage: '',
     },
     [AnswerType.Python]: {
@@ -58,7 +58,7 @@ export const answerTypes = {
             Вы умеете брать на себя <RedText>много{'\n'}задач</RedText> и легко справляетесь {'\n'}с <BlueText>{'<'}</BlueText>
             любыми проектами<BlueText>{'>'}</BlueText>.{'\n\n'}Вы легкий на подъем и общительный человек, <BlueText>желающий помочь всем</BlueText>.
         </Text>,
-        image: firstQGif,
+        image: PythonGif,
         shareImage: ''
     },
 };

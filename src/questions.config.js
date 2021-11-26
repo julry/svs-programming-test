@@ -1,6 +1,6 @@
 import React from 'react';
 import { AnswerType } from './answerTypes.config';
-import { firstQGif, forthGif, secondQGif, thirdGif } from './constants/images';
+import { fifthGif, firstQGif, forthGif, secondQGif, seventhGif, sixthGif, thirdGif } from './constants/images';
 import { BlueText, RedText, Title } from './components/common/Text';
 
 export const questions = [
@@ -127,7 +127,7 @@ export const questions = [
             <RedText>Какую подпись</RedText>
             {'\n'}ты бы поставил(-а) в {'{\n'}<BlueText>электронную почту?</BlueText>{'\n}'}
         </Title>,
-        image: forthGif,
+        image: fifthGif,
         answers: [
             {
                 id: '1',
@@ -154,7 +154,7 @@ export const questions = [
     {
         id: '6',
         text: () => <Title><BlueText>Чем</BlueText> займемся {'{\n'}<RedText>после работы?</RedText>{'\n}'}</Title>,
-        image: forthGif,
+        image: sixthGif,
         answers: [
             {
                 id: '1',
@@ -183,7 +183,7 @@ export const questions = [
         text: () => <Title>
             И <RedText>последний</RedText> вопрос:{'\n'}какие твои любимые {'{\n'}<BlueText>рабочие задачи?</BlueText>{'\n}'}
         </Title>,
-        image: forthGif,
+        image: seventhGif,
         answers: [
             {
                 id: '1',

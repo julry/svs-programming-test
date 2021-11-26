@@ -10,6 +10,7 @@ import { AnswerType } from '../../answerTypes.config';
 import { Button } from '../common/Button';
 import { LeftArrow } from '../svg/LeftArrow';
 import { FlexWrapper } from '../common/FlexWrapper';
+import { ShareText } from '../common/ShareText';
 
 const Wrapper = styled.div`
     padding: 1.2vh 25px;
@@ -138,9 +139,14 @@ const LanguageWrapper = styled.div`
     color: #D2DEE7;
     background: #072339;
     border-top-right-radius: 4px;
-    margin-right: 4px;
+    margin: 20px 4px 5px 0;
     font-family: 'Inter', sans-serif;
-    margin-top: 20px;
+    
+    @media screen and (max-height: 600px){
+            padding: 8px 7px;
+            font-size: 14px;
+            margin: 10px 4px 5px 0;
+    }
 `;
 
 const ArrowIcon = styled(LeftArrow)`
@@ -178,6 +184,7 @@ export const Intro = () => {
                     <LanguageWrapper key={type}>{type}</LanguageWrapper>
                 ))}
             </FlexWrapper>
+            <ShareText />
         </AddInfoWrapper>
 
 

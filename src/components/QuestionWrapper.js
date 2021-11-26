@@ -70,6 +70,9 @@ const AnswerWrapper = styled.div`
     width: 100%;
     border-radius: 4px;
     
+    &:hover {
+            background: ${ ({isSelected}) => isSelected ? '#FF0000' : 'rgba(255, 0, 0, 0.7)'};
+    }
     & + & {
       margin-top: 5px;
     }
