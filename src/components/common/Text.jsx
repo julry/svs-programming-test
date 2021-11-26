@@ -49,3 +49,19 @@ export const BlueText = styled.span`
 export const RedText = styled.span`
     color: #FF0000;
 `;
+
+
+export const SmallText = styled(Text)`
+    font-size: 12px;
+    @media screen and (max-width: 330px){
+        font-size: 10px;
+    }
+    
+    @media screen and (min-width: 640px){
+        font-size: 16px;
+    }
+    
+    @media screen and (min-width: 1100px){
+        font-size: 20px;
+    }
+`;

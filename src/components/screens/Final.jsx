@@ -1,12 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
 import { useResult } from '../../hocs/useResult';
-import { BlueText, Text } from '../common/Text';
+import { BlueText, SmallText, Text } from '../common/Text';
 import { TopLine } from '../common/TopLine';
 import { FlexWrapper } from '../common/FlexWrapper';
 import { VKIcon } from '../svg/VKIcon';
 import { ImageWrapper } from '../common/ImageWrapper';
 import { getShareParams } from '../../utils/getShareParams';
+import { ShareText } from '../common/ShareText';
 
 const Wrapper = styled.div`
     display: flex;
@@ -142,20 +143,7 @@ const AddTitleWrapper = styled.div`
   }
 `;
 
-const SmallText = styled(Text)`
-    font-size: 12px;
-    @media screen and (max-width: 330px){
-        font-size: 10px;
-    }
-    
-    @media screen and (min-width: 640px){
-        font-size: 16px;
-    }
-    
-    @media screen and (min-width: 1100px){
-        font-size: 20px;
-    }
-`;
+
 
 const DescriptionWrapper = styled.div`
   max-width: 340px;
@@ -224,21 +212,14 @@ const ShareWrapper = styled(FlexWrapper)`
     }
 `;
 
-const ShareText = styled(SmallText)`
-    max-width: 205px;
+const ShareTextStyled = styled(ShareText)`
     margin-left: 19px;
+    max-width: 205px;
     
     @media screen and (min-width: 640px){
       max-width: 433px;
     }
     
-    @media screen and (min-width: 900px) and (orientation: landscape){
-      max-width: 400px;
-    }
-  
-    @media screen and (min-width: 1100px){
-        max-width: 520px;
-    }
 `;
 
 export const Final = () => {
@@ -270,12 +251,11 @@ export const Final = () => {
                 <ShareBtn onClick={onShare}>
                     <VKIconStyled/>
                 </ShareBtn>
-                <ShareText>Репостни результат
+                <ShareTextStyled>Репостни результат
                     с хештегом <BlueText>#языкисеверстали </BlueText>
                     себе на стену VK и поборись
-                    за наушники Sony WH-1000XM4!</ShareText>
+                    за наушники Sony WH-1000XM4!</ShareTextStyled>
             </ShareWrapper>
-
         </Wrapper>
     )
 }
