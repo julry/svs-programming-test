@@ -7,6 +7,18 @@ import { Question2 } from './components/screens/questions/Question2';
 import { Question1 } from './components/screens/questions/Question1';
 import { Intro } from './components/screens/Intro';
 import { Final } from './components/screens/Final';
+import {
+  CPlusGif,
+  CSharpGif,
+  fifthGif,
+  firstQGif,
+  forthGif,
+  JavaGif, PythonGif,
+  secondQGif,
+  seventhGif,
+  sixthGif,
+  thirdGif
+} from './constants/images';
 
 export const ScreenType = {
   Intro: 'intro',
@@ -19,56 +31,56 @@ export const screens = [
     name: 'intro',
     component: Intro,
     type: ScreenType.Intro,
-    preloadImages: [],
+    preloadImages: [firstQGif],
   },
   {
     name: 'question-1',
     component: Question1,
     type: ScreenType.Question,
-    preloadImages: [],
-    image: []
+    preloadImages: [secondQGif],
+    image: [firstQGif]
   },
   {
     name: 'question-2',
     component: Question2,
     type: ScreenType.Question,
-    preloadImages: [],
-    image: []
+    preloadImages: [thirdGif],
+    image: [secondQGif]
   },
   {
     name: 'question-3',
     component: Question3,
     type: ScreenType.Question,
-    preloadImages: [],
-    image: []
+    preloadImages: [forthGif],
+    image: [thirdGif]
   },
   {
     name: 'question-4',
     component: Question4,
     type: ScreenType.Question,
-    preloadImages: [],
-    image: [],
+    preloadImages: [fifthGif],
+    image: [forthGif],
   },
   {
     name: 'question-5',
     component: Question5,
     type: ScreenType.Question,
-    preloadImages: [],
-    image: [],
+    preloadImages: [sixthGif],
+    image: [fifthGif],
   },
   {
     name: 'question-6',
     component: Question6,
     type: ScreenType.Question,
-    preloadImages: [],
-    image: [],
+    preloadImages: [seventhGif],
+    image: [sixthGif],
   },
   {
     name: 'question-7',
     component: Question7,
     type: ScreenType.Question,
-    preloadImages: [],
-    image: [],
+    preloadImages: [JavaGif, CSharpGif, CPlusGif, PythonGif],
+    image: [seventhGif],
   },
   {
     name: 'final',

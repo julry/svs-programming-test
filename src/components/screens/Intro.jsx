@@ -21,7 +21,7 @@ const Wrapper = styled.div`
     }
     
     @media screen and (min-width: 640px){
-      padding: 4vh 10.8vw 7.2vh;
+      padding: 3.3vh 10.8vw 7.2vh;
     }
     
     @media screen and (min-width: 640px) and (max-height: 850px){
@@ -30,7 +30,7 @@ const Wrapper = styled.div`
     
     @media screen and (min-width: 900px) and (orientation: landscape){
       display: grid;
-      padding: 1.5vh 5.4vw 14.1vh 6.9vw;
+      padding: 1.5vh 5.4vw 7.1vh 6.9vw;
       grid-template-columns: 41vw auto;
       grid-template-rows: 11.5vh 1fr;
       grid-auto-flow: column;
@@ -39,7 +39,7 @@ const Wrapper = styled.div`
     }
     
     @media screen and (min-width: 1100px){
-      grid-template-rows: 15.5vh 1fr;
+      grid-template-rows: 21.5vh 1fr;
       grid-row-gap: 1.5vh;
     }
 `;
@@ -59,7 +59,7 @@ const LogoStyled = styled(Logo)`
     @media screen and (min-width: 640px){
       width: 180px;
       height: 80px;
-      margin-bottom: 3.6vh;
+      margin-bottom: 1.6vh;
     }
     
     @media screen and (max-height: 600px){
