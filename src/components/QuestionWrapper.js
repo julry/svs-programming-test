@@ -21,7 +21,7 @@ const Wrapper = styled.div`
     
     @media screen and (min-width: 900px) and (orientation: landscape){
       display: grid;
-      padding: 0 5.4vw 16.1vh 6.9vw;
+      padding: 0 5.4vw 12.1vh 6.9vw;
       grid-template-columns: 41vw auto;
       grid-template-rows: 1fr;
       grid-auto-flow: column;
