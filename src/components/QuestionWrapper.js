@@ -1,4 +1,4 @@
-import React, { useContext, useCallback } from 'react';
+import React, { useContext, useCallback, useEffect, useState } from 'react';
 import styled from 'styled-components';
 import { questions } from '../questions.config';
 import { ProgressContext } from '../contexts/ProgressContext';
@@ -79,7 +79,7 @@ const AnswerWrapper = styled.div`
     border-radius: 4px;
     
     &:hover {
-            background: ${ ({isSelected}) => isSelected ? '#FF0000' : 'rgba(255, 0, 0, 0.7)'};
+            background: ${ ({isSelected, isTouchDevice}) => isSelected ? '#FF0000' : isTouchDevice ? '#062743' : 'rgba(255, 0, 0, 0.7)'};
     }
     & + & {
       margin-top: 5px;
@@ -126,8 +126,16 @@ const ButtonStyled = styled(Button)`
 export const QuestionWrapper = props => {
     const { question } = props;
     const { answers, setAnswer, setPrev, setNext } = useContext(ProgressContext);
-
+    const [isTouchDevice, setIsTouchDevice] = useState(false);
     const questionAnswers = question.answers;
+
+    useEffect(()=>{
+          setIsTouchDevice(('ontouchstart' in window) ||
+                (navigator.maxTouchPoints > 0) ||
+                (navigator.msMaxTouchPoints > 0));
+    }, [])
+
+
 
     const handleAnswerChange = useCallback((answerId) => {
         setAnswer(question.id, answerId);
@@ -138,6 +146,7 @@ export const QuestionWrapper = props => {
         return (
             <AnswerWrapper
                 key={answer.id}
+                isTouchDevice={isTouchDevice}
                 isSelected={answers[question.id] && answers[question.id] === answer.id}
                 onClick={() => handleAnswerChange(answer.id)}
             >
