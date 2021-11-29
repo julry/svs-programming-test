@@ -15,6 +15,10 @@ const Wrapper = styled.div`
     flex-direction: column;
     height: 100%;
     
+    @media screen and (min-height: 700px){
+        padding-bottom: 7vh;
+    }
+    
     @media screen and (min-width: 640px){
       padding: 0 10.8vw 7.2vh;
     }
@@ -31,6 +35,10 @@ const Wrapper = styled.div`
 
 const ContentWrapper = styled.div`
     padding: 15px 0;
+    
+    @media screen and (min-height: 700px){
+        padding-top: 5vh;
+    }
     
     @media screen and (min-width: 640px){
       padding: 7.3vh 0 0;

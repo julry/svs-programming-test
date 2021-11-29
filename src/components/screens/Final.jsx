@@ -8,6 +8,7 @@ import { VKIcon } from '../svg/VKIcon';
 import { ImageWrapper } from '../common/ImageWrapper';
 import { getShareParams } from '../../utils/getShareParams';
 import { ShareText } from '../common/ShareText';
+import { SEVERSTAL_TAG } from '../../constants/hashtag';
 
 const Wrapper = styled.div`
     display: flex;
@@ -251,10 +252,13 @@ export const Final = () => {
                 <ShareBtn onClick={onShare}>
                     <VKIconStyled/>
                 </ShareBtn>
-                <ShareTextStyled>Репостни результат
-                    с хештегом <BlueText>#языкисеверстали </BlueText>
+                <ShareTextStyled>
+                    Репостни результат
+                    с хештегом <BlueText>{SEVERSTAL_TAG} </BlueText>
                     себе на стену VK и поборись
-                    за наушники Sony WH-1000XM4!</ShareTextStyled>
+                    за наушники Sony WH-1000XM4!
+                    {'\n'}Победителей выберем рандомайзером 23.12.21.
+                </ShareTextStyled>
             </ShareWrapper>
         </Wrapper>
     )

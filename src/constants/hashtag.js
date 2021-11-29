@@ -1,0 +1,1 @@
+export const SEVERSTAL_TAG = '#Северстальhelloworld';

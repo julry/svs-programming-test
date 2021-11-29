@@ -11,6 +11,10 @@ import CSharpGif from '../static/gifs/csharp.gif';
 import CPlusGif from '../static/gifs/CPlus.gif';
 import JavaGif from '../static/gifs/Java.gif';
 import PythonGif from '../static/gifs/python.gif';
+import CSharpVK from '../static/images/CSharpVK.png';
+import CPlusVK from '../static/images/CPlusVK.png';
+import JavaVK from '../static/images/JavaVK.png';
+import PythonVK from '../static/images/PythonVK.png';
 
 export {
     lineGif,
@@ -25,5 +29,9 @@ export {
     CPlusGif,
     CSharpGif,
     JavaGif,
-    PythonGif
+    PythonGif,
+    CPlusVK,
+    CSharpVK,
+    PythonVK,
+    JavaVK
 };

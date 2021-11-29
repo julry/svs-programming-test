@@ -5,6 +5,11 @@ const Wrapper = styled.div`
     position: relative;
     height: 24.5vh;
     z-index: 2;
+
+    @media screen and (min-width: 640px){
+        max-height: 190px;
+    }    
+    
     @media screen and (max-height: 640px) and (orientation: landscape){
       min-height: 170px;
     }
