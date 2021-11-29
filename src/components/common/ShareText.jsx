@@ -15,12 +15,10 @@ const ShareTextStyled = styled(SmallText)`
 
 
 export const ShareText = (props) =>{
+    const {children, ...lastProps} = props;
     return (
-        <ShareTextStyled {...props}>Репостни результат
-            с хештегом <BlueText>#языкисеверстали </BlueText>
-            себе на стену VK и поборись
-            за наушники Sony WH-1000XM4!
-            {'\n'}Победителей выберем рандомайзером.
+        <ShareTextStyled {...lastProps}>
+            {children}
         </ShareTextStyled>
     )
 }

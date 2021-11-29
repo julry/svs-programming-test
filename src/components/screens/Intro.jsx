@@ -11,6 +11,7 @@ import { Button } from '../common/Button';
 import { LeftArrow } from '../svg/LeftArrow';
 import { FlexWrapper } from '../common/FlexWrapper';
 import { ShareText } from '../common/ShareText';
+import { SEVERSTAL_TAG } from '../../constants/hashtag';
 
 const Wrapper = styled.div`
     padding: 1.2vh 25px;
@@ -184,7 +185,12 @@ export const Intro = () => {
                     <LanguageWrapper key={type}>{type}</LanguageWrapper>
                 ))}
             </FlexWrapper>
-            <ShareText />
+            <ShareText>
+                Репостни результат
+                с хештегом <BlueText>{SEVERSTAL_TAG} </BlueText>
+                себе на стену VK и поборись
+                за наушники Sony WH-1000XM4!
+            </ShareText>
         </AddInfoWrapper>
 
 

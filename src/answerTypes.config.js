@@ -1,6 +1,12 @@
 import React from 'react';
 import { BlueText, RedText, Text } from './components/common/Text';
-import { CPlusGif, CSharpGif, firstQGif, introGif, JavaGif, PythonGif, secondQGif, thirdGif } from './constants/images';
+import {
+    CPlusGif, CPlusVK,
+    CSharpGif, CSharpVK,
+    JavaGif, JavaVK,
+    PythonGif,
+    PythonVK,
+} from './constants/images';
 
 export const AnswerType = {
     Python: 'Python',
@@ -24,7 +30,7 @@ export const answerTypes = {
             и работаете на ее достижение.
         </Text>,
         image: CPlusGif,
-        shareImage: '',
+        shareImage: CPlusVK,
     },
     [AnswerType.CSharp]: {
         type: AnswerType.CSharp,
@@ -37,7 +43,7 @@ export const answerTypes = {
             развитие<BlueText>{'>'}</BlueText> и поиск <RedText>новых возможностей</RedText>.
         </Text>,
         image: CSharpGif,
-        shareImage: '',
+        shareImage: CSharpVK,
     },
     [AnswerType.Java]: {
         type: AnswerType.Java,
@@ -48,7 +54,7 @@ export const answerTypes = {
             Скорость работы вам не важна,{'\n'}куда больше вы цените <BlueText>качество</BlueText>.
         </Text>,
         image: JavaGif,
-        shareImage: '',
+        shareImage: JavaVK,
     },
     [AnswerType.Python]: {
         type: AnswerType.Python,
@@ -59,6 +65,6 @@ export const answerTypes = {
             любыми проектами<BlueText>{'>'}</BlueText>.{'\n\n'}Вы легкий на подъем и общительный человек, <BlueText>желающий помочь всем</BlueText>.
         </Text>,
         image: PythonGif,
-        shareImage: ''
+        shareImage: PythonVK
     },
 };
