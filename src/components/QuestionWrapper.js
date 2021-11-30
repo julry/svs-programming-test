@@ -7,6 +7,7 @@ import { Button } from './common/Button';
 import { TopLine } from './common/TopLine';
 import { Text } from './common/Text';
 import { FlexWrapper } from './common/FlexWrapper';
+import { reachMetrikaGoal } from '../utils/reachMetrikaGoal';
 
 const Wrapper = styled.div`
     display: flex;
@@ -139,6 +140,8 @@ export const QuestionWrapper = props => {
 
     const handleAnswerChange = useCallback((answerId) => {
         setAnswer(question.id, answerId);
+        const goalName = +question.id === questions.length ? 'finish' : `q${question.id}`;
+        reachMetrikaGoal(goalName);
         setTimeout(setNext, 1000);
     }, [question, setAnswer, setNext]);
 

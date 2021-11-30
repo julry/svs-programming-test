@@ -12,6 +12,7 @@ import { LeftArrow } from '../svg/LeftArrow';
 import { FlexWrapper } from '../common/FlexWrapper';
 import { ShareText } from '../common/ShareText';
 import { SEVERSTAL_TAG } from '../../constants/hashtag';
+import { reachMetrikaGoal } from '../../utils/reachMetrikaGoal';
 
 const Wrapper = styled.div`
     padding: 1.2vh 25px;
@@ -160,6 +161,11 @@ const ArrowIcon = styled(LeftArrow)`
 export const Intro = () => {
     const { setNext } = useContext(ProgressContext);
 
+    const onStart = () => {
+        reachMetrikaGoal('start');
+        setNext();
+    };
+
     return <Wrapper>
         <LogoWrapper>
             <LogoStyled />
@@ -176,7 +182,7 @@ export const Intro = () => {
         <AddInfoWrapper>
             <ImageWrapperStyled image={introGif} >
                 <FlexWrapper>
-                    <Button onClick={setNext} isShort={false}>Играть</Button>
+                    <Button onClick={onStart} isShort={false}>Играть</Button>
                     <ArrowIcon />
                 </FlexWrapper>
             </ImageWrapperStyled>
