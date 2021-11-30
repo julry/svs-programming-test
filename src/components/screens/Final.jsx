@@ -9,6 +9,7 @@ import { ImageWrapper } from '../common/ImageWrapper';
 import { getShareParams } from '../../utils/getShareParams';
 import { ShareText } from '../common/ShareText';
 import { SEVERSTAL_TAG } from '../../constants/hashtag';
+import { reachMetrikaGoal } from '../../utils/reachMetrikaGoal';
 
 const Wrapper = styled.div`
     display: flex;
@@ -227,6 +228,7 @@ export const Final = () => {
     const result = useResult();
 
     const onShare = () => {
+        reachMetrikaGoal('social');
         window.open(getShareParams(result), '_blank');
     }
 

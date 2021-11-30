@@ -19,10 +19,6 @@ const ScreenWrapperStyled = styled.div`
 const DEFAULT_ANSWERS = questions.reduce((res, question) => ({ ...res, [question.id]: null }), {});
 
 export function ScreenWrapper() {
-    /////////////////// for development ////////////////////////////////////
-    const urlParams = new URLSearchParams(window.location.search);
-    const screenParam = urlParams.get('screen');
-    ////////////////////////////////////////////////////////////////////////
     const [height, setHeight] = useState('100vh');
 
     useEffect(() => {
@@ -39,7 +35,7 @@ export function ScreenWrapper() {
         };
     }, []);
 
-    const [currentScreenIndex, setCurrentScreenIndex] = useState(+screenParam || 0);
+    const [currentScreenIndex, setCurrentScreenIndex] = useState( 0);
     const [screenDelta, setScreenDelta] = useState(0);
     const [answers, setAnswers] = useState(DEFAULT_ANSWERS);
 
