@@ -90,7 +90,7 @@ const ResultTitleWrapper = styled(FlexWrapper)`
 
 const ResultImageWrapper = styled.div`
     position: relative;
-    margin-bottom: 4.5vh;
+    margin-bottom: 3.2vh;
     
     @media screen and (min-width: 640px){
         width: 410px;
@@ -170,42 +170,32 @@ const DescriptionWrapper = styled.div`
 
 const ShareBtn = styled(FlexWrapper)`
     justify-content: center;
-    border-radius: 50%;
-    height: 50px;
-    width: 50px;
-    min-width: 50px;
+    border-radius: 18px;
+    height: 32px;
+    padding: 0 10px;
+    width: fit-content;
     background: #FF0000;
     cursor: pointer;
-    
-    @media screen and (max-width: 320px){
-      height: 40px;
-      width: 40px;
-      min-width: 40px;
-    } 
+    margin-bottom: 10px;
     
     @media screen and (min-width: 640px){
-      height: 54px;
-      width: 54px;
-      min-width: 54px;
+      height: 45px;
+      border-radius: 20px;
     }
 `;
 
 const VKIconStyled = styled(VKIcon)`
-    width: 32px;
-    height: 32px;
-    
-    @media screen and (max-width: 320px){
-      height: 22px;
-      width: 22px;
-    }
+    width: 20px;
+    height: 20px;
+    margin-right: 15px;
     
     @media screen and (min-width: 640px){
-      height: 37px;
-      width: 37px;
+      height: 35px;
+      width: 35px;
     }
 `;
 
-const ShareWrapper = styled(FlexWrapper)`
+const ShareWrapper = styled.div`
     margin-top: auto;
     
     @media screen and (min-width: 900px) and (orientation: landscape){
@@ -215,13 +205,10 @@ const ShareWrapper = styled(FlexWrapper)`
 `;
 
 const ShareTextStyled = styled(ShareText)`
-    margin-left: 19px;
-    max-width: 205px;
-    
-    @media screen and (min-width: 640px){
-      max-width: 433px;
+    max-width: 455px;
+    @media screen and (min-width:110px){
+      max-width: 550px;
     }
-    
 `;
 
 export const Final = () => {
@@ -253,6 +240,7 @@ export const Final = () => {
             <ShareWrapper>
                 <ShareBtn onClick={onShare}>
                     <VKIconStyled/>
+                    <Text>Поделиться и выиграть приз</Text>
                 </ShareBtn>
                 <ShareTextStyled>
                     Репостни результат
