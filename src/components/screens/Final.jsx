@@ -205,12 +205,10 @@ const ShareWrapper = styled.div`
 `;
 
 const ShareTextStyled = styled(ShareText)`
-    //max-width: 205px;
-    //
-    //@media screen and (min-width: 640px){
-    //  max-width: 433px;
-    //}
-    //
+    max-width: 455px;
+    @media screen and (min-width:110px){
+      max-width: 550px;
+    }
 `;
 
 export const Final = () => {
